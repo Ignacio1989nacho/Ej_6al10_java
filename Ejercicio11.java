@@ -13,15 +13,13 @@ import java.util.Scanner;
  */
 public class Ejercicio11 {
 
-    public static void main(String[] args) {
-
-    
+   public static void main(String[] args) {
 
         Scanner leer = new Scanner(System.in);
 
         System.out.println("Ingrese dos numeros:");
-        double num;
-        double num2;
+        int num;
+        int num2;
         boolean log = false;
         num = leer.nextInt();
         num2 = leer.nextInt();
@@ -39,41 +37,38 @@ public class Ejercicio11 {
             switch (op) {
 
                 case 1:
-                    double suma = num + num2;
-                    System.out.println(suma);
-                    log = true;
+                    int suma = num + num2;
                     break;
                 case 2:
-                    double rest = num - num2;
-                    System.out.println(rest);
-                    log = true;
+                    int rest = num - num2;
                     break;
                 case 3:
-                    double mult = num * num2;
-                    System.out.println(mult);
-                    log = true;
+                    int mult = num * num2;
                     break;
                 case 4:
                     double div = num / num2;
-                    System.out.println(div);
-                    log = true;
                     break;
-               }
-            
-                if(op == 5){
-                    Scanner leer2 = new Scanner(System.in);
-                    System.out.println("Desea salir? S/N:");
-                        
-                    String op2 = leer2.nextLine(); // char op2 = leer.next...();
+                case 5:
+                    System.out.print("¿Está seguro que desea salir del programa (S/N)? ");
+                    char confirmacion = leer.next().charAt(0);
 
-                    if (op2.equals("S")) {
-                        log = true;
+                    if (confirmacion == 'S' || confirmacion == 's') {
+                        System.out.println("Saliendo del programa...");
+                        return; // Sale del programa
+                    } else {
+                        break; // Vuelve al menú
                     }
-                }  
-        }while(log == false);
+                default:
+                    System.out.println("Opción inválida. Intente de nuevo.");
+            }
 
-        
-    
-   }
-}
+            System.out.println(); // Salto de línea para separar las opciones del menú
+        } while (true);
+                    
+                
+                    }
+                    
+            }
+
+
 
