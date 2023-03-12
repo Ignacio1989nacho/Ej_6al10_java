@@ -7,10 +7,7 @@ package java_ejercicios_6al17;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Usuario
- */
+
 public class Ejercicio11 {
 
    public static void main(String[] args) {
@@ -68,7 +65,8 @@ public class Ejercicio11 {
                 
                     }
                     
-            }
+            
+}
 
 
 
